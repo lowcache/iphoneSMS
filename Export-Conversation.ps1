@@ -40,7 +40,7 @@ if (-not $BackupPath) {
         (Join-Path $env:APPDATA 'Apple Computer\MobileSync\Backup')   # iTunes from apple.com
     )
     $BackupPath = Get-ChildItem -Path $roots -Directory -ErrorAction SilentlyContinue |
-        Where-Object { Test-Path (Join-Path $_.FullName 'Manifest.db') } |
+        Where-Object { Test-Path (Join-Path $_.FullName 'Manifest.plist') } |
         Sort-Object LastWriteTime -Descending |
         Select-Object -First 1 -ExpandProperty FullName
     if (-not $BackupPath) {

@@ -26,7 +26,7 @@ powershell -ExecutionPolicy Bypass -File .\Export-Conversation.ps1 -Contact 5558
 | `-BackupPath <dir>` | Use a specific backup. The default is the newest one found. |
 | `-OutDir <dir>` | Output folder. The default is `export-<timestamp>` next to the script. |
 
-The script prints the paths of the exported `.txt` files. Every conversation that includes the contact is exported, group chats included, so pick the file you need.
+Three "No HEIC/CAF/MOV converter found" warnings appear on every run; they only affect attachments and can be ignored. The script prints the paths of the exported `.txt` files. Every conversation that includes the contact is exported, group chats included, so pick the file you need.
 
 ## 3. Print
 
