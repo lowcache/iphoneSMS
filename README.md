@@ -34,6 +34,11 @@ Open the `.txt` file in Notepad and choose **File → Print**.
 
 ## Limitations
 
-- If **Messages in iCloud** is on, messages not stored on the phone itself are missing from the backup.
+- If **Messages in iCloud** is on, messages not stored on the phone itself are missing from the backup. iCloud Backup doesn't include them either. To get the full history onto the phone before step 1:
+  1. On the iPhone, open **Settings → [your name] → iCloud → Messages in iCloud**. On some iOS versions it's under **Saved to iCloud**. Turn off **Use on this iPhone**.
+  2. When prompted, choose **Disable and Download Messages**. The phone needs enough free storage, and a large history can take a while.
+  3. When the download finishes, continue from step 1 above. You can turn Messages in iCloud back on after the export.
+
+  Do **not** choose **Disable & Delete** (or **Turn Off and Delete from iCloud**). That turns the feature off on every device and deletes the iCloud copy. Menu names can vary slightly between iOS versions.
 - Attachments appear as file references, not images.
 - Without Contacts in the backup, senders show as phone numbers or email addresses.
