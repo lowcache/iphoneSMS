@@ -2,7 +2,9 @@
 
 # iPhone conversation → printable text (Windows 11)
 
-Exports one iPhone text conversation (SMS, MMS and iMessage) to a `.txt` file. Each message shows its date and time, the sender and the text. It uses [imessage-exporter](https://github.com/ReagentX/imessage-exporter) 4.3.0, which the script downloads on first run and checks against a pinned SHA256.
+Exports one iPhone text conversation (SMS, MMS and iMessage) to a `.txt` file. Each message shows its date and time, the sender and the text.
+
+The actual extraction is done by [imessage-exporter](https://github.com/ReagentX/imessage-exporter) by ReagentX (GPL-3.0). This repo is a Windows wrapper around it: the script downloads release 4.3.0 on first run, checks it against a pinned SHA256, finds the iPhone backup and runs the export.
 
 ## 1. Back up the iPhone
 
@@ -30,6 +32,18 @@ powershell -ExecutionPolicy Bypass -File .\Export-Conversation.ps1 -Contact 5558
 
 Three "No HEIC/CAF/MOV converter found" warnings appear on every run; they only affect attachments and can be ignored. The script prints the paths of the exported `.txt` files. Every conversation that includes the contact is exported, group chats included, so pick the file you need.
 
+Example output:
+
+```text
+Feb 06, 2025  1:25:24 PM (Read by you after 2 minutes, 40 seconds)
+Jane Doe
+I'm going to try to eat as quick as possible and then come over
+
+Feb 06, 2025  1:31:02 PM
+Me
+Sounds good, see you soon
+```
+
 ## 3. Print
 
 Open the `.txt` file in Notepad and choose **File → Print**.
@@ -44,3 +58,7 @@ Open the `.txt` file in Notepad and choose **File → Print**.
   Do **not** choose **Disable & Delete** (or **Turn Off and Delete from iCloud**). That turns the feature off on every device and deletes the iCloud copy. Menu names can vary slightly between iOS versions.
 - Attachments appear as file references, not images.
 - Without Contacts in the backup, senders show as phone numbers or email addresses.
+
+## License
+
+MIT, see [LICENSE](LICENSE). imessage-exporter is a separate project under GPL-3.0; it is downloaded at run time, not included in this repo.
