@@ -1,3 +1,5 @@
+![iPhone SMS to TXT](docs/banner.png)
+
 # iPhone conversation → printable text (Windows 11)
 
 Exports one iPhone text conversation (SMS, MMS and iMessage) to a `.txt` file. Each message shows its date and time, the sender and the text. It uses [imessage-exporter](https://github.com/ReagentX/imessage-exporter) 4.3.0, which the script downloads on first run and checks against a pinned SHA256.
