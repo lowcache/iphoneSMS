@@ -1,4 +1,4 @@
-![iPhone SMS to TXT](docs/banner.png)
+![iPhone SMS to TXT](assets/banner.png)
 
 # iPhone conversation → printable text (Windows 11)
 
